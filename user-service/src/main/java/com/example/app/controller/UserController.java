@@ -8,7 +8,7 @@ public class UserController {
 
 	@RequestMapping("/user")
 	public String getUser() {
-		return "Hello World";
+		return "Hello World User";
 	}
 
 }
