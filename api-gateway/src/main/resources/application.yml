@@ -9,3 +9,9 @@ eureka:
     fetch-registry: true
   instance:
     hostname: localhost
+zuul:
+  prefix: /api
+  routes:
+    user-service:
+      path: /user/**
+      service-id: USER-SERVICE
