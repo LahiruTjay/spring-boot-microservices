@@ -16,4 +16,9 @@ public class UserController {
         return "Hello World User2";
     }
 
+    @RequestMapping("/user-feign")
+    public String getUserFeign() {
+        return "Hello World Feign";
+    }
+
 }
