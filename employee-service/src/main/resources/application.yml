@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: employee-service
+  datasource:
+    url: jdbc:mysql://localhost/employee_db?autoReconnect=true&useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 eureka:
   client:
     register-with-eureka: true
