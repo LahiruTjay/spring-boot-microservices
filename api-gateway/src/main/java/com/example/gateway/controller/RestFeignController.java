@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient("user-service")
 public interface RestFeignController {
-    
+
     @RequestMapping(value = "/user-feign")
     String testFeign();
 
