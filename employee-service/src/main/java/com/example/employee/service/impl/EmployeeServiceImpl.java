@@ -29,4 +29,26 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
+    public ResponseEntity<CommonResponse> addEmployee(Employee employee) {
+        return CommonResponseUtil.successResponse(employeeDAO.save(employee));
+    }
+
+    public ResponseEntity<CommonResponse> updateEmployee(long employeeId, Employee employeeDetails) {
+        Employee employee = employeeDAO.findOne(employeeId);
+        if (employee != null) {
+            employee.setFirstName(employeeDetails.getFirstName());
+            employee.setLastName(employeeDetails.getLastName());
+            employee.setBirthDate(employeeDetails.getBirthDate());
+            employeeDAO.save(employee);
+            return CommonResponseUtil.successResponse(employeeDAO.save(employee));
+        } else {
+            return CommonResponseUtil.failureResponse();
+        }
+    }
+
+    public ResponseEntity<CommonResponse> deleteEmployeeById(long employeeId) {
+        employeeDAO.delete(employeeId);
+        return CommonResponseUtil.successResponse("Deleted");
+    }
+
 }
