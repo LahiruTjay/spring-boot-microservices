@@ -39,7 +39,7 @@ public class EmployeeController {
         return employeeService.updateEmployee(employeeId, employeeDetails);
     }
 
-    @RequestMapping(value = "/employee/{employeeId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/employees/{employeeId}", method = RequestMethod.DELETE)
     ResponseEntity<CommonResponse> deleteEmployeeById(@PathVariable(value = "employeeId") long employeeId) {
         return employeeService.deleteEmployeeById(employeeId);
     }
