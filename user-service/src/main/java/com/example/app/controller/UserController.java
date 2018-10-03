@@ -13,12 +13,12 @@ public class UserController {
 
     @RequestMapping("/user2")
     public String getUser2() {
-        return "Hello World User2";
+        return "Hello World User22";
     }
 
     @RequestMapping("/user-feign")
     public String getUserFeign() {
-        return "Hello World Feign";
+        return "Hello World Feign works";
     }
 
 }
