@@ -13,8 +13,13 @@ import com.example.employee.util.CommonResponseUtil;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
+    private EmployeeDAO employeeDAO;
+
     @Autowired
-    EmployeeDAO employeeDAO;
+    public EmployeeServiceImpl(EmployeeDAO employeeDAO) {
+        super();
+        this.employeeDAO = employeeDAO;
+    }
 
     public ResponseEntity<CommonResponse> getAllEmployees() {
         return CommonResponseUtil.successResponse(employeeDAO.findAll());
