@@ -7,3 +7,8 @@ This is a multi-module maven project, which includes:
 2. API Gateway
 3. User Service
 4. Employee Service (Mock service)
+
+To be implemented:
+
+* Authentication
+* File uploading etc.
