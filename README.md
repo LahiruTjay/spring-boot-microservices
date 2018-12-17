@@ -1,6 +1,6 @@
 # spring-boot-microservices
 
-This repository contains a simple implementation of the micro-service architecture using Spring boot.
+This repository contains a simple implementation of the REST based micro-service architecture using Spring boot.
 
 This is a multi-module maven project, which includes:
 1. Service Discovery
