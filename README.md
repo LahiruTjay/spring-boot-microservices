@@ -12,3 +12,5 @@ To be implemented:
 
 * Authentication
 * File uploading etc.
+* File serving
+* Mongo DB implementation
