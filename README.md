@@ -14,3 +14,4 @@ To be implemented:
 * File uploading etc.
 * File serving
 * Mongo DB implementation
+* Add hystrix, zuul properly and reimplement.
