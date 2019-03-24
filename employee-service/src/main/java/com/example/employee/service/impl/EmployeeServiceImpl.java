@@ -1,5 +1,7 @@
 package com.example.employee.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -21,6 +23,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeDAO = employeeDAO;
     }
 
+    public List<Employee> getAllEmployeesForAngular() {
+        return employeeDAO.findAll();
+    }
+    
     public ResponseEntity<CommonResponse> getAllEmployees() {
         return CommonResponseUtil.successResponse(employeeDAO.findAll());
     }

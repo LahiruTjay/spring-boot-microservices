@@ -1,8 +1,10 @@
 package com.example.employee.controller;
 
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,12 @@ public class EmployeeController {
 
     @Autowired
     EmployeeService employeeService;
+
+    // @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/angular/employees", method = RequestMethod.GET)
+    List<Employee> getAllEmployeesForAngular() {
+        return employeeService.getAllEmployeesForAngular();
+    }
 
     @RequestMapping(value = "/employees", method = RequestMethod.GET)
     ResponseEntity<CommonResponse> getAllEmployees() {
